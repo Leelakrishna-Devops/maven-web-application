@@ -15,7 +15,7 @@ stage('CheckoutCode'){
 git branch: 'development', credentialsId: '3667ec9e-7827-40b5-bf42-acadbaca2263', url: 'https://github.com/Leelakrishna-Devops/maven-web-application.git'
 }
 stage('Build'){
-sh "${mavenHome}/bin/mvn clean package"
+sh "${mavenHome}/bin/mvn clean packag"
 }
   /*
 stage('ExecuteSonarQubeReport'){
