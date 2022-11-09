@@ -10,7 +10,7 @@ node{
     properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
     
   try{
-    
+    sendslacknotifications("STARTED")
 stage('CheckoutCode'){
 git branch: 'development', credentialsId: '3667ec9e-7827-40b5-bf42-acadbaca2263', url: 'https://github.com/Leelakrishna-Devops/maven-web-application.git'
 }
